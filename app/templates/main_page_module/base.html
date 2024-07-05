@@ -1,0 +1,67 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zaladin 2</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .container {
+            text-align: center;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            flex: 1; /* Allow this container to grow and fill space */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        h1 {
+            margin-top: 0;
+        }
+        .radar-image {
+            max-width: 100%;
+            max-height: 70vh; /* Set a maximum height for the image */
+            height: auto;
+            border-radius: 10px;
+        }
+        footer {
+            width: 100%;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="https://meteo.arso.gov.si/uploads/probase/www/observ/radar/si0-rm-anim.gif" alt="Radar Image" class="radar-image">
+    </div>
+    <footer>
+        <p> 2017 - <script>document.write(new Date().getFullYear())</script> &copy; Zaladin 2</p>
+
+    </footer>
+</body>
+</html>
