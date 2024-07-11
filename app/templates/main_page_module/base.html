@@ -53,11 +53,34 @@
         footer a:hover {
             text-decoration: underline;
         }
+        .badge {
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 5px;
+            color: #fff;
+            margin-top: 10px;
+        }
+        .badge-success {
+            background-color: #4caf50;
+        }
+        .badge-failed {
+            background-color: #f44336;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <img src="https://meteo.arso.gov.si/uploads/probase/www/observ/radar/si0-rm-anim.gif" alt="Radar Image" class="radar-image">
+        <!--<img src="https://meteo.arso.gov.si/uploads/probase/www/observ/radar/si0-rm-anim.gif" alt="Radar Image" class="radar-image"> -->
+        <img src="{{ url_for('static', filename=gif_filename) }}" alt="Radar Image" class="radar-image">
+        <div class="footer">
+            <p>Last updated: {{ update_time }}</p>
+            {% if GIF_SUCCESS[0] == True %}
+                <span class="badge badge-success">Image Up-To-Date</span>
+            {% else %}
+                <span class="badge badge-failed">High Traffic: Displaying newest image in repository</span>
+            {% endif %}
+        </div>
+        
     </div>
     <footer>
         <p> 2017 - <script>document.write(new Date().getFullYear())</script> &copy; Zaladin 2</p>

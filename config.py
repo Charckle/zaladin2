@@ -7,11 +7,7 @@ class Config(object):
     DEBUG = False
     TESTING = False
     SECRET_KEY = environ.get('SECRET_KEY', "B\xb2?.\xdf\x9f\xa7m\xf8\x8a%,\xf7\xc4\xfa\x91")
-    
-    JWT_SECRET_KEY = environ.get('JWT_SECRET_KEY', "sdf34tasdft34")
-    
-    UPLOAD_FOLDER = environ.get('UPLOAD_FOLDER', "files_u")
-    
+            
     SESSION_COOKIE_SECURE = True
     
 
@@ -25,25 +21,8 @@ class Config(object):
     # CSRF_ENABLED = environ.get('CSRF_ENABLED', False)
     
     # App name
-    APP_NAME = environ.get('APP_NAME', "Razor Notes")
-    # Enable modules
-    MODULE_MEMORY = environ.get('MODULE_MEMORY', None)
-    MODULE_SECRETS= environ.get('MODULE_SECRETS', None)
-    
-    # Icon color to differentiate between different instances in use
-    ICON_COLOR = environ.get('ICON_COLOR', "RED")
-    
-    # webauthn settings
-    RP_ID = environ.get('RP_ID', "localhost")
-    RP_NAME = environ.get('RP_NAME', "Razor Notes zubin")
-    RP_PORT = environ.get('RP_PORT', ":5000")
-    RP_PROTOCOL = environ.get('RP_PROTOCOL', "http")
-    
-    # ip and network restriction
-    IP_RESTRICTION = environ.get('IP_RESTRICTION', "1")
-    IPS_NETWORKS = environ.get('IPS_NETWORKS', "127.0.0.1,127.0.0.0/8")
+    APP_NAME = environ.get('APP_NAME', "Zaladin 2")
 
-    
 class ProductionConfig(Config):
     TESTING = False
 

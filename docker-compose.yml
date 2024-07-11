@@ -1,0 +1,14 @@
+services:
+  zaladin2:
+    container_name: zaladin2
+    image: charckle/zaladin2:0.0.2
+    #build: .
+    ports:
+      - "3108:8000"
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "5m"
+        max-file: "10"
+    restart: unless-stopped
+
